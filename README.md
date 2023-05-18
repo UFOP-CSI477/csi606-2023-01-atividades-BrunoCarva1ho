@@ -3,11 +3,11 @@
 
 ## Atualize os seus dados
 
-- Nome:
-- Matrícula:
-- Curso:
-- Semestre/Ano correntes:
-- Link para o seu GitHub:
+- Nome: Bruno Carvalho 
+- Matrícula:  19.2.8200
+- Curso: Sistemas de Informação
+- Semestre/Ano correntes: 5
+- Link para o seu GitHub: https://github.com/BrunoCarva1ho
 
 ## [Projeto final:](./Projeto/README.md)
 
