@@ -1,4 +1,4 @@
-(Não consegui fazer o upload da pasta inteira aqui, consegui fazer o commit compleo nos meus repositórios)
+(Não consegui fazer o upload da pasta inteira aqui, consegui fazer o commit completo em meus repositórios padrão do perfil)
 
   Fiz as quatro operações (Inserir, Alterar, Excluir e Exibir) utilizando o micro-framework Flask do Python.
   Utilizei o MySQL WorkBench para criação do banco de dados.
