@@ -1,6 +1,3 @@
-(Não consegui fazer o upload da pasta inteira aqui, consegui fazer o commit completo em meus repositórios padrão do perfil)
+O trabalho completo esta dentro da pasta 'trabalho_pract-main'.
 
-  Fiz as quatro operações (Inserir, Alterar, Excluir e Exibir) utilizando o micro-framework Flask do Python.
-  Utilizei o MySQL WorkBench para criação do banco de dados.
-  Bootstrap também foi utilizado.
-  
+Desenvolvi os atributos CREATE, READ, UPDATE E DELETE utilizando o Micro-Framework Flask do Python.
