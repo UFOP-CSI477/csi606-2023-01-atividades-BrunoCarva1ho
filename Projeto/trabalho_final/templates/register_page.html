@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/register_page.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="https://kit.fontawesome.com/a27253da47.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;900&display=swap"
+        rel="stylesheet">
+
+    <title>Formulário</title>
+</head>
+
+<body>
+    <div>
+        <a href="/" class="fa-solid fa-arrow-left fa-xl" style="position: absolute; left:5%; top:12%; font-size:20px; text-decoration:none; color:white;">Voltar para tela de login</a>
+    </div>
+
+    <div class="container">
+        <div class="header">
+            <h2>Criar sua Conta</h2>
+        </div>
+
+        <form id="form" class="form" action="/register-user" method="POST">
+            <div class="form-control">
+                <label for="username">Nome</label>
+                <input type="text" name="nome" placeholder="Digite seu nome de usuário" required>
+                <i class="fas fa-exclamation-circle"></i>
+                <i class="fas fa-check-circle"></i>
+                <small>Mensagem de erro</small>
+            </div>
+
+            <div class="form-control">
+                <label for="email">Email</label>
+                <input type="text" name="email" id="email" placeholder="Digite seu Email" required>
+                <i class="fas fa-exclamation-circle"></i>
+                <i class="fas fa-check-circle"></i>
+                <small>Mensagem de erro</small>
+            </div>
+
+            <div class="form-control">
+                <label for="estado">Estado</label>
+                <input type="text" name="estado" id="estado" placeholder="Estado-UF" required>
+                <i class="fas fa-exclamation-circle"></i>
+                <i class="fas fa-check-circle"></i>
+                <small>Mensagem de erro</small>
+            </div>
+
+            <div class="form-control">
+                <label for="cidade">Cidade</label>
+                <input type="text" name="cidade" id="cidade" placeholder="Cidade" required>
+                <i class="fas fa-exclamation-circle"></i>
+                <i class="fas fa-check-circle"></i>
+                <small>Mensagem de erro</small>
+            </div>
+
+            <div class="form-control">
+                <label for="password">Senha</label>
+                <input type="password" name="senha" id="password" placeholder="Digite sua Senha" required>
+                <i class="fas fa-exclamation-circle"></i>
+                <i class="fas fa-check-circle"></i>
+                <small>Mensagem de erro</small>
+            </div>
+
+            <div class="form-control">
+                <label for="password-confirmation">Confirmação de Senha</label>
+                <input type="password" id="password-confirmation" placeholder="Digite sua Senha novamente" required>
+                <i class="fas fa-exclamation-circle"></i>
+                <i class="fas fa-check-circle"></i>
+                <small>Mensagem de erro</small>
+            </div>
+
+            <button type="submit">Cadastrar</button>
+
+        </form>
+    </div>
+
+    <script src="https://kit.fontawesome.com/a27253da47.js" crossorigin="anonymous"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/a27253da47.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename= 'base.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static', filename= 'home_page.css')}}">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <title>EUGIR®</title>
+</head>
+
+<body>
+    <nav style="height: 100%;">
+        <div class="w3-sidebar w3-bar-block w3-collapse w3-card"
+            style="width:200px; color:black; font-size:20px; top:13.65%; position:fixed;" id="mySidebar">
+            <button class="w3-bar-item w3-button w3-hide-large" onclick="w3_close()">Close &times;</button>
+            <a href="/register-data/{{nome_usuario}}/{{id_usuario}}" class="w3-bar-item w3-button"
+                style="background-color:white ;">Registrar Dia</a>
+            <a href="/" class="w3-bar-item w3-button" style="background-color: rgba(255, 0, 0, 0.491);">Sair</a>
+        </div>
+
+        <div class="w3-teal">
+            <button class="w3-button w3-teal w3-xlarge" onclick="w3_open()">☰</button>
+            <div class="w3-container">
+                <h1 style="left: 20%;">Informações Gerais</h1>
+                <h3 style="top:1%; right: 5%; position:absolute;">Informações do Usuário Logado<br> nome:
+                    {{nome_usuario}}<br>id: {{id_usuario}}</h3>
+            </div>
+        </div>
+
+
+        <script>
+            function w3_open() {
+                document.getElementById("mySidebar").style.display = "block";
+            }
+
+            function w3_close() {
+                document.getElementById("mySidebar").style.display = "none";
+            }
+        </script>
+
+
+        <div>
+            <label for="" style="position: absolute; top: 17%; left:25%; color: black;">Ultimos Dados
+                Registrados</label>
+            <table class="container1">
+
+                <tr>
+                    <th>Qtd de Leite(L)</th>
+                    <th>Qtd de Ração(Kg)</th>
+                    <th>Tempo Gasto(Hr)</th>
+                    <th>Tempo/Clima</th>
+                    <th>Data</th>
+                    <th>Delete</th>
+                </tr>
+
+                {% for item in dados_diarios %}
+                <tr>
+                    <td>{{item.2}}</td>
+                    <td>{{item.3}}</td>
+                    <td>{{item.4}}</td>
+                    <td>{{item.5}}</td>
+                    <td>{{item.6}}</td>
+                    <td><a href="/delete-data/{{item.0}}/{{nome_usuario}}/{{id_usuario}}" class="fa-solid fa-trash-can fa-sm"></a></td>
+                </tr>
+                {% endfor %}
+            </table>
+        </div>
+
+
+        <div>
+            <i class="grafico-leite"></i>
+        </div>
+
+        <div>
+            <i class="grafico-tempo"></i>
+        </div>
+    </nav>
+
+
+
+</body>
+
+</html>

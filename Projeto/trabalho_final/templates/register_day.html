@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='register_page.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="https://kit.fontawesome.com/a27253da47.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+
+    <title>Registrar Dia</title>
+</head>
+
+<body>
+    <div>
+        <a href="/home-page/{{nome_usuario}}/{{id_usuario}}" class="fa-solid fa-arrow-left fa-xl" style="position: absolute; left:5%; top:12%; font-size:20px; text-decoration:none; color:white;">Voltar</a>
+    </div>
+
+    <div class="container">
+        <div class="header">
+            <h2>Adicione as Informações de Hoje</h2>
+        </div>
+
+        <form id="form" class="form" action="/register-data/{{nome_usuario}}/{{id_usuario}}" method="POST">
+            <div class="form-control">
+                <label for="qtd_leite">Quantidade de Leite no Dia(em litros):</label>
+                <input type="number" name="qtd_leite" placeholder="Digite a quantidade nesse dia" required>
+                <i class="fas fa-exclamation-circle"></i>
+                <i class="fas fa-check-circle"></i>
+                <small>Mensagem de erro</small>
+            </div>
+
+            <div class="form-control">
+                <label for="qtd_racao">Quantidade de Ração Gasta(em quilos):</label>
+                <input type="number" name="qtd_racao" id="qtd_racao" placeholder="100Kgs,... 200Kgs,..." required>
+                <i class="fas fa-exclamation-circle"></i>
+                <i class="fas fa-check-circle"></i>
+                <small>Mensagem de erro</small>
+            </div>
+
+            <div class="form-control">
+                <label for="tempo_gasto">Tempo Gasto(horas.minutos):</label>
+                <input type="time" name="tempo_gasto" id="tempo_gasto" placeholder="Tempo Gasto" required>
+                <i class="fas fa-exclamation-circle"></i>
+                <i class="fas fa-check-circle"></i>
+                <small>Mensagem de erro</small>
+            </div>
+
+            <div class="form-control">
+                <label for="clima">Clima</label>
+                <select name="clima" id="clima" style="border-radius: 5px;
+                width:200px; margin-left: 10px; font-size:17px;">
+                    <option value="Quente">Quente</option>
+                    <option value="Frio">Frio</option>
+                    <option value="Mediano">Mediano</option>
+                </select>
+                
+                <i class="fas fa-exclamation-circle"></i>
+                <i class="fas fa-check-circle"></i>
+                <small>Mensagem de erro</small>
+            </div>
+
+            <div class="form-control">
+                <label for="data">Data</label>
+                <input type="date" name="data" id="data" required>
+                <i class="fas fa-exclamation-circle"></i>
+                <i class="fas fa-check-circle"></i>
+                <small>Mensagem de erro</small>
+            </div>
+
+
+            <button type="submit">Salvar Informações</button>
+
+        </form>
+    </div>
+
+    <script src="https://kit.fontawesome.com/a27253da47.js" crossorigin="anonymous"></script>
+
+</body>
+
+</html>

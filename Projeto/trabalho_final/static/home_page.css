@@ -1,0 +1,71 @@
+table{
+    text-align: center;
+    border: black 5px;
+    font-size: 20px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px black;
+}
+th{
+    border: black;
+}
+td{
+    border: black;
+}
+
+.container1{
+    background-color: #0da59690;
+    position: absolute;
+    height: auto;
+    color: black;
+    width: 40%;
+    left: 15%;
+    top: 22%;
+    
+}
+
+.container2{
+    background-color: #0da59690;
+    position: absolute;
+    height: auto;
+    color: black;
+    left: 15%;
+    top: 40%;
+}
+
+.botao-dados-hoje{
+    position: absolute;
+    left: 50%;
+    top: 5%;
+    transform: translate(-50%);
+
+    font-size: 25px;
+    color: rgb(18, 255, 77);
+    text-decoration: none;
+}
+
+.botao-dados-hoje:hover{
+    cursor: pointer;
+}
+
+.botoes-side-bar{
+    color: black;
+    font-size: medium;
+}
+
+.grafico-leite{
+    background-image: url('./graficos/grafico_leite.png');
+    width: 700px;
+    height: 500px;
+    position: absolute;
+    left: 60%;
+    margin-top: 50px;
+}
+
+.grafico-tempo{
+    background-image: url('./graficos/grafico_tempos.png');
+    width: 700px;
+    height: 500px;
+    position: absolute;
+    left: 60%;
+    margin-top: 550px;
+}
