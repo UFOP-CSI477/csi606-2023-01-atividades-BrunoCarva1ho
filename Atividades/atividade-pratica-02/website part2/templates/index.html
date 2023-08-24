@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/a27253da47.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../static/base.css">
+    <title>Home</title>
+</head>
+
+<body>
+
+    <center>
+        <nav class="barra">
+            <h2 class="text-barra">Montana Celulares</h2>
+            <a class="fa-solid fa-right-from-bracket fa-xl"
+                style="left: 4%; top:50%; position: absolute; text-decoration: none;" href="/logout"> Sair</a>
+            <a style="left: 80%; position:absolute; text-decoration:none; top:40%;"
+                class="fa-solid fa-cart-shopping fa-lg" href="/meus-enderecos"> Meu Carrinho</a><br><br>
+            <a style="left: 80%; position:absolute; text-decoration:none; top:70%;"
+                class="fa-solid fa-map-location-dot fa-lg" href="/cadastrar-endereco"> Add Local de Entrega</a>
+        </nav>
+
+
+        <div>
+            <h4 style="left: 2%; top: 150px; position:absolute; padding: 30px;">Usuário {{username.0.1}} logado!</h4>
+            <br>
+        </div>
+
+
+        <div class="produtos">
+            <h3 style="font-size: 25px;">Produtos</h3>
+
+            <div style="position: center;">
+                <ul><br>
+
+                    {% for produto in produtos %}
+                    <li>{{produto.1}}<br>
+                        <a href="">adicionar ao carrinho</a>
+                    </li><br>
+                    {% endfor %}
+
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="enderecos">
+            <h3>Endereços</h3><br>
+
+            {% for endereco in enderecos %}
+
+            <ul>
+                <li>
+                    Rua: {{endereco.2}}
+                </li>
+                <li>
+                    Número: {{endereco.3}}
+                </li>
+                <li>
+                    Bairro: {{endereco.4}}
+                </li>
+                <li>
+                    Telefone: {{endereco.6}}
+                </li>
+                <a href="/editar-endereco/{{endereco.0}}">editar</a>
+                <br>
+            </ul>
+
+            {% endfor%}
+        </div>
+</body>
+
+</html>

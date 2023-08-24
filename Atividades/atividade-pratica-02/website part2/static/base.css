@@ -1,0 +1,54 @@
+body{
+    margin: 50px;
+    padding: 100px;
+}
+
+.login-invalido{
+    color: red;
+}
+
+.barra{
+    background-color: rgb(48, 242, 177);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 150px;
+    text-align: center;
+    box-shadow: cadetblue 5px 5px 5px 5px;
+}
+
+.text-barra{
+    top: 50%;
+    left: 50%;
+    position:absolute;
+    text-align: center;
+    transform: translate(-50%,-50%);
+}
+
+.produtos{
+    position: absolute;
+    left: 30%;
+    transform: translate(-50%,0);
+    top: 30%;
+    background-color: rgb(195, 195, 195);
+    width: 40%;
+    border-radius: 20px;
+    font-size: large;
+}
+
+.enderecos{
+    position: absolute;
+    left: 75%;
+    right: 20%;
+    transform: translate(-50%,0);
+    top: 30%;
+    background-color: rgb(195, 195, 195);
+    width: 40%;
+    border-radius: 20px;
+    font-size: large;
+}
+
+li{
+    list-style: none;
+}
