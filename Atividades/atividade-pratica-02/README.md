@@ -1,2 +1,2 @@
 
-<img src="/website part2/preview/homepage.png">
+<img src="./preview/homepage.png">
